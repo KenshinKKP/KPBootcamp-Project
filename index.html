@@ -7,63 +7,437 @@
   <meta name="theme-color" content="#000000" />
   <meta name="description" content="E-Commerce project" />
   <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
-  <title>MAF</title>
+  <title>Anime Mania</title>
 </head>
 
-<body class="bg-gradient-to-r from-yellow-400 via-red-500 to-pink-500">
+<body class="bg-gradient-to-r from-green-400 to-blue-500 bg-opacity-25">
+  <nav class="bg-purple-800 shadow dark:text-indigo-900">
+    <div class="
+        container
+        px-6
+        py-3
+        mx-auto
+        md:flex md:justify-between md:items-center
+      ">
+      <div class="flex items-center justify-between">
+        <div>
+          <a class="
+              text-5xl
+              font-bold
+              text-white
+              dark:text-white
+              md:text-5xl
+              hover:text-pink-500
+            " href="#">Anime Mania</a>
+        </div>
 
-  <div class="border-black border-4 bg-purple-500 p-10">
-    <h1 class="text-5xl font-mono text-center">
-      Lets Talk Figurines!
-    </h1>
+        <!-- Mobile menu button -->
+        <div class="flex md:hidden">
+          <button type="button" class="
+              text-white
+              dark:text-white
+              hover:text-pink-500
+              dark:hover:text-gray-400
+              focus:outline-none focus:text-gray-600
+              dark:focus:text-gray-400
+            " aria-label="toggle menu">
+            <svg viewBox="0 0 24 24" class="w-6 h-6 fill-current">
+              <path fill-rule="evenodd"
+                d="M4 5h16a1 1 0 0 1 0 2H4a1 1 0 1 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2z">
+              </path>
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- Mobile Menu open: "block", Menu closed: "hidden" -->
+      <div class="items-center md:flex">
+        <div class="flex flex-col md:flex-row md:mx-6">
+          <a class="
+              my-1
+              font-bold
+              text-white
+              text-xl
+              dark:text-white
+              hover:text-pink-500
+              dark:hover:text-indigo-400
+              md:mx-4 md:my-0
+            " href="#">Home</a>
+          <a class="
+              my-1
+              font-bold
+              text-white
+              text-xl
+              dark:text-white
+              hover:text-pink-500
+              dark:hover:text-indigo-400
+              md:mx-4 md:my-0
+            " href="#">Shop</a>
+          <button class="
+          my-1
+              font-bold
+              text-white
+              dark:text-white
+              hover:text-pink-500
+              dark:hover:text-indigo-400
+              md:mx-4 md:my-0
+        " type="button" onclick="openDropdown(event,'dropdown-example-1')">
+            Shop1<i class="fas fa-angle-down ml-2"></i>
+          </button>
+          <div class="
+          hidden
+          bg-indigo-400
+          font-bold
+          text-1xl
+          z-50
+          float-left
+          py-2
+          list-none
+          text-left
+          rounded
+          shadow-lg
+          mt-1
+        " style="min-width: 12rem" id="dropdown-example-1">
+            <a href="#" class="
+            text-sm
+            py-2
+            px-4
+            font-serif
+            text-1xl
+            font-bold
+            block
+            w-full
+            whitespace-nowrap
+            text-white
+            hover:text-pink-500
+          ">
+              Figurines
+            </a>
+            <a href="#" class="
+            text-sm
+            py-2
+            px-4
+            font-serif
+            text-1xl
+            font-bold
+            block
+            w-full
+            whitespace-nowrap
+            text-white
+            hover:text-pink-500
+          ">
+              Manga
+            </a>
+            <a href="#" class="
+            text-sm
+            py-2
+            px-4
+            font-serif
+            text-1xl
+            font-bold
+            block
+            w-full
+            whitespace-nowrap
+            text-white
+            hover:text-pink-500
+          ">
+              Gifting
+            </a>
+            <a href="#" class="
+            text-sm
+            py-2
+            px-4
+            font-serif
+            text-1xl
+            font-bold
+            block
+            w-full
+            whitespace-nowrap
+            text-white
+            hover:text-pink-500
+          ">
+              Others
+            </a>
+          </div>
+          <script src="https://unpkg.com/@popperjs/core@2.9.1/dist/umd/popper.min.js" charset="utf-8"></script>
+          <script>
+            function openDropdown(event, dropdownID) {
+              let element = event.target;
+              while (element.nodeName !== "BUTTON") {
+                element = element.parentNode;
+              }
+              var popper = Popper.createPopper(
+                element,
+                document.getElementById(dropdownID),
+                {
+                  placement: "bottom-start",
+                }
+              );
+              document.getElementById(dropdownID).classList.toggle("hidden");
+              document.getElementById(dropdownID).classList.toggle("block");
+            }
+          </script>
+          <a class="
+              my-1
+              font-bold
+              text-white
+              dark:text-white
+              hover:text-pink-500
+              dark:hover:text-indigo-400
+              md:mx-4 md:my-0
+            " href="#">Contact</a>
+          <a class="
+              my-1
+              font-bold
+              text-white
+              dark:text-white
+              hover:text-pink-500
+              dark:hover:text-indigo-400
+              md:mx-4 md:my-0
+            " href="#">About</a>
+        </div>
+
+        <div class="flex justify-center md:block">
+          <a class="
+              relative
+              ont-bold
+              text-white
+              dark:text-white
+              hover:text-pink-500
+              dark:hover:text-gray-300
+            " href="#">
+            <i class="fas fa-shopping-cart"></i>
+
+            <span class="
+                absolute
+                top-0
+                left-0
+                p-1
+                text-xs text-white
+                bg-indigo-500
+                rounded-full
+                "></span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <div class="
+          container
+          w-full
+          p-20
+          m-4
+          mx-auto
+          my-16
+          text-center
+          bg-white
+          border-2 border-gray-300 border-dashed
+          h-96
+          rounded-xl
+        ">
+    <image class="object-fill h-96 w-full" src="RK1.jpg" alt="Rurouni Kenshin 1">
+      <div class="mt-20 italic text-indigo-600 text-md">Anime Mania! as the name suggests, its all about anime...
+      </div>
+    </image>
   </div>
-  <div class="flex flex-wrap justify-center p-10">
-    <div class="w-3/12 border-black border-4 bg-green-400 p-10">
-      <h1 class="text-3xl font-mono text-center">
-        Figurines
-      </h1>
-      <ul class="list-disc list-inside">
-        <li>Japanese Anime</li>
-        <li>Disney</li>
-        <li>Marvel Cinematic Universe</li>
-        <li>Harry Potter</li>
-        <li>Bear Bricks</li>
-      </ul>
+  <div class="rounded-full space-y-8 h-full justify-center p-20">
+    <div id="Figurines" onclick="changeColor('text-indigo-400', this.id);"
+      class="rounded-full border-2 border-purple-400 p-10">
+      <h1 class="text-3xl font-bold font-serif text-center">Figurines</h1>
+      <button onclick="myFunction()">Read More</button>
     </div>
-    <div class="w-3/12 border-black border-4 bg-green-400 p-10">
-      <h1 class="text-3xl font-mono text-center">
-        Manga
-      </h1>
-      <ol class="list-decimal list-inside">
-        <li>Written in Japanese</li>
-        <li>Written in English</li>
-        <li>Written in Mandarin</li>
-        <li>Written in Hangul (Korean)</li>
-      </ol>
+    <script>
+      function myFunction() {
+        document.getElementById("Figurines").innerHTML = "The world of figurines! Here you will find figurines from every genre. Cant find what you are looking for? Drop us an email and let us do the hunting for you!";
+      }
+    </script>
+    <div id="Manga" onclick="changeColor('text-black', this.id);" class="rounded-full bg-indigo-400 p-10">
+      <h1 class="text-3xl font-bold font-serif text-center">Manga</h1>
+      <button onclick="myFunction()">Read More</button>
     </div>
-    <div class="w-3/12 border-black border-4 bg-green-400 p-10">
-      <h1 class="text-3xl font-mono text-center">
-        Gifts
-      </h1>
-      &rarr; Folders / Notebooks / Writing Pads</br>
-      &rarr; Backpacks / Tote Bags / Wristlets / Messenger Bags</br>
-      &rarr; Pens / Markers / Pencils</br>
-      &rarr; Apparels</br>
-      &rarr; Covers / Cases / Sleeves for Devices</br>
+    <script>
+      function myFunction() {
+        document.getElementById("Manga").innerHTML = "Prefer to hold a book in hand rather than stare at screens to read? Fret not! We got you covered! Browse our range of mangas to get your fix!";
+      }
+    </script>
+    <div id="Gifts" onclick="changeColor('text-indigo-400', this.id);"
+      class="rounded-full border-2 border-purple-400 p-10">
+      <h1 class="text-3xl font-bold font-serif text-center">Gifts</h1>
+      Don't we know of someone whose into Anime or loves collectables from Harry Potter or the MCU series? This
+      festive season, give them a reason to smile!
     </div>
-    <div class="w-3/12 border-black border-4 bg-green-400 p-10">
-      <h1 class="text-3xl font-mono text-center">
-        Others
-      </h1>
-      &raquo; Corporate Gifting</p>
-      &raquo; Events Planning</p>
-      &raquo; Anime Photo Booth</p>
-    </div>
-    <div class="inline border-black border-2">
-      <img src="RK1.jpg" alt="Rurouni Kenshin 1">
+    <div id="Others" onclick="changeColor('text-yellow-500', this.id);" class="rounded-full bg-indigo-400 p-10">
+      <h1 class="text-3xl font-bold font-mono text-center">Others</h1>
+      Now that the world is opening up and networking sessions might just become an "in-thing" again, reach out to us
+      to make the networking a more entertaining and enjoyable experience.
     </div>
   </div>
   </div>
+  <script>
+    function changeColor(newColor, elementId) { var elem = document.getElementById(elementId); elem.classList.add(newColor); }
+  </script>
+  <!-- Required font awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css" />
+
+  <footer class="bg-purple-800 shadow dark:text-indigo-900">
+    <div class="
+    container
+    px-5
+    py-24
+    mx-auto
+    flex
+    md:items-center
+    lg:items-start
+    md:flex-row md:flex-nowrap
+    flex-wrap flex-col
+  ">
+      <div class="
+      flex-grow flex flex-wrap
+      md:pl-20
+      -mb-10
+      md:mt-0
+      mt-10
+      md:text-left
+      text-center
+    ">
+        <div class="lg:w-1/4 md:w-1/2 w-full px-4">
+          <h2 class="
+          title-font
+          font-bold
+              text-white
+              text-xl
+              dark:text-white
+              hover:text-pink-500
+              dark:hover:text-indigo-400
+          tracking-widest
+          text-sm
+          mb-3
+        ">
+            About Us
+          </h2>
+        </div>
+        <div class="lg:w-1/4 md:w-1/2 w-full px-4">
+          <h2 class="
+          title-font
+          font-bold
+              text-white
+              text-xl
+              dark:text-white
+              hover:text-pink-500
+              dark:hover:text-indigo-400
+          tracking-widest
+          text-sm
+          mb-3
+        ">
+            Shop
+          </h2>
+          <nav class="list-none mb-10">
+            <li>
+              <a href="" class="text-white hover:text-pink-500 font-bold">Figurines</a>
+            </li>
+            <li>
+              <a href="" class="text-white hover:text-pink-500 font-bold">Manga</a>
+            </li>
+            <li>
+              <a href="" class="text-white hover:text-pink-500 font-bold">Gifting</a>
+            </li>
+            <li>
+              <a href="" class="text-white hover:text-pink-500 font-bold">Others</a>
+            </li>
+          </nav>
+        </div>
+        <div class="lg:w-1/4 md:w-1/2 w-full px-4">
+          <h2 class="
+          title-font
+          font-bold
+              text-white
+              text-xl
+              dark:text-white
+              hover:text-pink-500
+              dark:hover:text-indigo-400
+          tracking-widest
+          text-sm
+          mb-3
+        ">
+            Contact Us
+          </h2>
+        </div>
+        <div class="lg:w-1/4 md:w-1/2 w-full px-4">
+          <h2 class="
+          title-font
+          font-bold
+              text-white
+              text-xl
+              dark:text-white
+              hover:text-pink-500
+              dark:hover:text-indigo-400
+          tracking-widest
+          text-sm
+          mb-3
+        ">
+            Be part of the Community!
+          </h2>
+
+        </div>
+      </div>
+      <div class="w-64 flex-shrink-0 md:mx-0 mx-auto text-center md:text-left">
+        <a href="" class="
+        flex
+        title-font
+        font-medium
+        items-center
+        md:justify-start
+        justify-center
+        text-gray-900
+      ">
+          <i class="fas fa-cubes fa-lg text-purple-500"></i>
+          <span class="ml-3 text-xl">Tailwind elements</span>
+        </a>
+        <p class="mt-2 text-sm text-gray-500">
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Modi,
+          quam?
+        </p>
+      </div>
+    </div>
+    <div class="bg-gray-100">
+      <div class="
+      container
+      mx-auto
+      py-4
+      px-5
+      flex flex-wrap flex-col
+      sm:flex-row
+    ">
+        <p class="text-gray-500 text-sm text-center sm:text-left">
+          © 2021 Copyright:
+          <a href="https://www.tailwind-elements.com/" class="text-gray-600 ml-1" target="_blank">Tailwind Elements</a>
+        </p>
+        <span class="
+        inline-flex
+        sm:ml-auto sm:mt-0
+        mt-2
+        justify-center
+        sm:justify-start
+      ">
+          <a href="" class="text-gray-500">
+            <i class="fab fa-facebook-f"></i>
+          </a>
+          <a href="" class="ml-3 text-gray-500">
+            <i class="fab fa-twitter"></i>
+          </a>
+          <a href="" class="ml-3 text-gray-500">
+            <i class="fab fa-linkedin-in"></i>
+          </a>
+          <a href="" class="ml-3 text-gray-500">
+            <i class="fab fa-youtube"></i>
+          </a>
+          <a href="" class="ml-3 text-gray-500">
+            <i class="fab fa-instagram"></i>
+          </a>
+        </span>
+      </div>
+    </div>
+  </footer>
 </body>
 
 </html>
